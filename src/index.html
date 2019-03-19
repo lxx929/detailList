@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页面</title>
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <div class="box">
+        <ul id="list">
+            <li>
+                <p>篮球</p>
+                <span>价格：<b>100</b>元 </span>
+            </li>
+            <li>
+                <p>气球</p>
+                <span>价格：<b>11</b>元 </span>
+            </li>
+            <li>
+                <p>足球</p>
+                <span>价格：<b>340</b>元 </span>
+            </li>
+            <li>
+                <p>象棋</p>
+                <span>价格：<b>15</b>元 </span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var lis = [...document.querySelectorAll('#list li')];
+    console.log(lis)
+
+
+
+    for (let i = 0; i < lis.length; i++) {
+        console.log(i)
+        lis[i].onclick = (e) => {
+            console.log(this.lis)
+
+            location.href = "../src/page/detail.html?name=" + name + "&price=" + price;
+        }
+    }
+</script>
+
+</html>
